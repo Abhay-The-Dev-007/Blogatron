@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
+
+# Dependency lock files (optional depending on your team)
+package-lock.json
+
+# Coverage/testing
+coverage/
+
+# Build output (if any)
+dist/
+build/
+
+# Uploads (optional if you don't want to track uploaded files)
+uploads/
+public/uploads/
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+
+# Local development tools (like live-server, etc.)
+.env.local
+.env.development
+.env.*.local

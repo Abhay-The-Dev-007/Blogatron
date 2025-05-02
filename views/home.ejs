@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Blogatron_____📓</title>
+</head>
+<body>
+    <body data-bs-theme="light">
+
+    <%- include('./partials/nav')  %> 
+
+    <div class="container mt-3">
+        <div class="row row-cols-4">
+            <% blogs.forEach(blog => { %>
+                <div class="col">
+                    <div class="card col" >
+                        <img src="<%= blog.coverImageURL %>" class="card-img-top" >
+                        <div class="card-body">
+                            <div style="white-space: pre-line;"><b><%= blog.title %></b></div>
+
+                            <a href="/blog/<%= blog._id %>" class="btn btn-primary mt-1">View</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <%- include('./partials/scripts') %>
+    
+</body>
+</html>

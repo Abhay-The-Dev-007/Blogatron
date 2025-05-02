@@ -1,0 +1,36 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('themeToggle');
+      const lightIcon = document.querySelector('.light-icon');
+      const darkIcon = document.querySelector('.dark-icon');
+  
+      if (!toggleBtn || !lightIcon || !darkIcon) {
+        console.log("Theme toggle elements not found");
+        return;
+      }
+  
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-bs-theme', currentTheme);
+      updateIcons(currentTheme);
+  
+      toggleBtn.addEventListener('click', () => {
+        const newTheme = document.body.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('data-bs-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcons(newTheme);
+      });
+  
+      function updateIcons(theme) {
+        if (theme === 'dark') {
+          lightIcon.style.display = 'inline';
+          darkIcon.style.display = 'none';
+        } else {
+          lightIcon.style.display = 'none';
+          darkIcon.style.display = 'inline';
+        }
+      }
+    });
+  </script>
+
