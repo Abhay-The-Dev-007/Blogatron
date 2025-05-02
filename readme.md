@@ -27,7 +27,9 @@
 ---
 
 ## 📂 Folder Structure
-    
+
+    ![Folder Structure](screenshots/structure.png)
+
     ├── middlewares
     ├── models
     ├── node_modules
