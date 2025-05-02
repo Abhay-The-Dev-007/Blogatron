@@ -27,23 +27,23 @@
 ---
 
 ## 📂 Folder Structure
-
-├── middlewares
-├── models
-├── node_modules
-├── public
-├── routes
-├── services
-├── views
-│ ├── partials
-│ ├── addBlog.ejs
-│ ├── blog.ejs
-│ ├── home.ejs
-│ ├── signin.ejs
-│ └── signup.ejs
-├── .env
-├── app.js
-├── package.json
+    
+    ├── middlewares
+    ├── models
+    ├── node_modules
+    ├── public
+    ├── routes
+    ├── services
+    ├── views
+    │ ├── partials
+    │ ├── addBlog.ejs
+    │ ├── blog.ejs
+    │ ├── home.ejs
+    │ ├── signin.ejs
+    │ └── signup.ejs
+    ├── .env
+    ├── app.js
+    ├── package.json
 
 ---
 
@@ -55,17 +55,19 @@
    cd blogatron
 
 2. Install dependencies
+    ```bash 
     npm install
 
 3. Create a .env file and set the following variables:
+    ```ini
     PORT=yourPORT
     MONGODB_URI=your_mongodb_connection_string
     JWT_SECRET=your_secret_key
 
 4. Run the app:
-    Development: npm run dev
-    Production: npm start
-    Visit: http://localhost:yourPORT
+    - Development: npm run dev
+    - Production: npm start
+    - Visit: http://localhost:yourPORT
 
 ---
 
