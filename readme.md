@@ -28,7 +28,7 @@
 
 ## 📂 Folder Structure
 
-![Folder Structure](screenshots/structure.png)
+
 
     ├── middlewares
     ├── models
