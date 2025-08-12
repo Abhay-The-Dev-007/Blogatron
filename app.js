@@ -5,9 +5,6 @@ const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const Blog = require("./models/blog")
 
-
-app.use(express.static(path.resolve("./public")))
-
 const userRoute = require("./routes/user")
 const blogRoute = require("./routes/blog")
 
