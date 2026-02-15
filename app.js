@@ -15,7 +15,12 @@ const {
 const app = express()
 const PORT = process.env.PORT || 8000;
 
-mongoose.connect(process.env.MONGO_URI).then((e) => console.log("MongoDB Connected"))
+mongoose.connect(process.env.MONGO_URI)
+        .then(() => console.log("MongoDB Connected"))
+        .catch((err) => {
+           console.error("MongoDB Connection Error:", err)
+           process.exit(1)
+       })
 
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./views"))
@@ -37,6 +42,6 @@ app.get("/", async (req, res) => {
 app.use("/user", userRoute)
 app.use("/blog", blogRoute)
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 });
